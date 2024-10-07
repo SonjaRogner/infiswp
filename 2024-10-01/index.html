@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>erste Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="container">
+    <main>
+        <section>
+            <h1 class="position-absolute start-50 top-10 translate-middle-x">eigene Website</h1>
+        </section>
+        <hr>
+        <header>
+            <div>
+                <p>Das ist eine <abbr title="Abkürzung">Abk.</abbr></p>
+                <code class="btn btn-danger">Das ist source code!</code>
+                <p>
+            </div>
+        </header>
+        <div class="border border-5 border-dark-subtle rounded-5 m-3 p-2">
+            <h3>Schriftarten:</h3>
+            <ol>
+                <li> <strong>fetter Text</strong> </li>
+                <li> <small>kleiner Text</small> </li>
+                <li> <cite>cite Text</cite> </li>
+                <li> <em>em Text</em> </li>
+            </ol>
+        </div>
+        <p>
+            <a href="https://www.google.at/">GOOGLEEEEEE</a>
+        <p>
+        <p>Am <time datetime="2024-09-23">24. Dezember</time> ist Weihnachten</p>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://media.istockphoto.com/id/1338128642/de/foto/nacht-new-york-reflektierende-stadtlichter.jpg?s=612x612&w=0&k=20&c=AFmGFG7EXxVous8eeW3sFpUm8BT7jkHs6K36h1eBQ_Y="
+                        class="d-block w-100 p-3" alt="ny">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/02/21/20/23/london-1214224_1280.jpg"
+                        class="d-block w-100 p-3" alt="london">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://live.staticflickr.com/2463/3598596311_84211f2566_b.jpg" class="d-block w-100 p-3"
+                        alt="paris">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <p>
+        <div class="alert alert-primary" role="alert"> PRIMARY ALERT </div>
+        <div class="alert alert-danger" role="alert"> DANGER ALERT </div>
+        <div class="alert alert-primary" role="alert"> PRIMARY ALERT </div>
+        <div class="alert alert-danger" role="alert"> DANGER ALERT </div>
+        <div class="alert alert-primary" role="alert"> PRIMARY ALERT </div>
+        <div class="alert alert-danger" role="alert"> DANGER ALERT </div>
+        <pre>Das soll formatiert sein</pre>
+        <aside>
+            <article class="text-center">
+                <h3>Überschrift für den Artikel</h3> Artikel ....
+            </article>
+        </aside>
+        <p>
+    </main>
+    <p class="d-inline-flex gap-1">
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">hund</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2"
+            aria-expanded="false" aria-controls="multiCollapseExample2">katze</button>
+    </p>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body"> <img
+                        src="https://media.os.fressnapf.com/cms/2020/04/Ratgeber-Welpenentwicklung.jpg?t=seoimg_703"
+                        alt="hund" style="width: 200px">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body"> <img
+                        src="https://media.4-paws.org/d/d/9/2/dd92f2d964a783c97c09a3ed1167979ce5c68c64/VIER%20PFOTEN_2020-10-07_00137-2569x1779-1920x1330.jpg"
+                        alt="katze" style="width: 200px"> </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <nav>
+        <h3>Links:</h3>
+        <ul>
+            <li><a href="https://www.disneyplus.com">DisneyPlus</a></li>
+            <li><a href="https://netflix.com">Netflix</a></li>
+            <li><a href="https://www.youtube.com/">YouTube</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <div>
+            <address> website von mir <br> 1100 wien <br>
+            </address>
+        </div>
+    </footer>
+</body>
+
+</html>
