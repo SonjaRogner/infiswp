@@ -1,0 +1,12 @@
+#time {
+    font-size: 2em;
+    margin: 20px;
+}
+
+#Mitte {
+    position: relative;
+    border: 7px solid rgb(30, 146, 254);
+    margin: 50px solid black;
+    width: 200px;
+    height: 200px;
+}
