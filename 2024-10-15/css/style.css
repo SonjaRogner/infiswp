@@ -1,0 +1,148 @@
+body {
+    background-color: #5286c1;
+}
+
+#blau {
+    position: relative;
+    width: 760px;
+    height: 20px;
+    background-color: #4371a3;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#hellblau {
+    position: relative;
+    width: 760px;
+    height: 70px;
+    background-color: #5286c1;
+}
+
+.ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Anfang a {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 27px;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.li {
+    display: inline-block;
+    unicode-bidi: isolate;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.Anfang li {
+
+    flex: 0 0 auto;
+    display: inline-block;
+
+}
+
+#ORF Bild {
+    position: relative;
+    width: 150px;
+    height: auto;
+}
+
+#blau2 {
+    position: relative;
+
+    width: 760px;
+    height: 30px;
+    background-color: #4371a3;
+}
+
+#Glocke {
+    position: relative;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    justify-content: flex-end;
+    /* align-self: flex-end;  */
+    /* left: 875px; */
+    left: 730px;
+}
+
+#ORF {
+    left: 30px;
+}
+
+#typ {
+    margin-bottom: 20px;
+}
+
+#weiß {
+    position: relative;
+    width: 760px;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+    padding: 0px;
+}
+
+summary:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: #000000;
+}
+
+#erstes {
+    text-decoration: none;
+    color: #466199;
+    font-size: 15px;
+}
+
+#zweites {
+    text-decoration: none;
+    color: #466199;
+    font-size: 15px;
+}
+
+#drittes {
+    text-decoration: none;
+    color: #466199;
+    font-size: 15px;
+}
+
+#viertes {
+    text-decoration: none;
+    color: #466199;
+    font-size: 15px;
+}
+
+#fünftes {
+    text-decoration: none;
+    color: #466199;
+    font-size: 15px;
+}
+
+summary {
+
+    list-style: none;
+}
+
+
+summary {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#dunkelblau {
+    position: relative;
+    width: 760px;
+    height: 30px;
+    background-color: #12375c;
+}
