@@ -3,25 +3,28 @@ body {
 }
 
 #blau {
-    position: relative;
-    width: 760px;
+    width: 875px;
     height: 27px;
     background-color: #4371a3;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
 #hellblau {
-    position: relative;
-    width: 760px;
+    display: flex;
+    justify-content: space-between;
+    width: 875px;
     height: 70px;
     background-color: #5286c1;
 }
 
-.ul {
+#ul {
     display: flex;
-    justify-content: space-between;
+    width: 875px;
+}
+
+.ul li {
+    left: 76px;
 }
 
 .Anfang a {
@@ -32,12 +35,12 @@ body {
     text-decoration: none;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
 .li {
     display: inline-block;
     unicode-bidi: isolate;
+    width: 76px;
 }
 
 a:hover {
@@ -60,7 +63,7 @@ a:hover {
 #blau2 {
     position: relative;
 
-    width: 760px;
+    width: 875px;
     height: 30px;
     background-color: #4371a3;
 }
@@ -72,21 +75,22 @@ a:hover {
     justify-content: flex-end;
     /* align-self: flex-end;  */
     /* left: 875px; */
-    left: 730px;
+    left: 845px;
 }
 
 #ORF {
     left: 30px;
 }
 
-#typ {
+#bild1 {
     margin-bottom: 20px;
+    left: 56px;
 }
 
 #weiß {
     position: relative;
-    width: 760px;
-    height: 900px;
+    width: 875px;
+    height: 1200px;
     background-color: rgb(255, 255, 255);
     padding: 0px;
 }
@@ -142,7 +146,61 @@ summary {
 
 #dunkelblau {
     position: relative;
-    width: 760px;
+    width: 875px;
     height: 30px;
     background-color: #12375c;
+}
+
+.bilder-box {
+    position: absolute;
+}
+
+.bild1 {
+    position: absolute;
+    height: 133px;
+    width: 347px;
+}
+
+.bilder-box {
+    position: relative;
+    height: 271px;
+    width: 875px;
+}
+
+.bild2 {
+    position: absolute;
+    height: 133px;
+    width: 171px;
+    top: 138px;
+}
+
+.bild3 {
+    position: absolute;
+    height: 133px;
+    width: 347px;
+    left: 175px;
+}
+
+.bild5 {
+    position: absolute;
+    height: 133px;
+    top: 138px;
+    left: 175px;
+}
+
+.Bildfeuer {
+    position: absolute;
+    top: 0px;
+    left: 704px;
+}
+
+.bild6 {
+    position: absolute;
+    top: 138px;
+    left: 350px;
+}
+
+.Bild7 {
+    position: absolute;
+    left: 527px;
 }
