@@ -1,0 +1,45 @@
+body {
+    background-color: #5286c1;
+}
+
+.grid-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    grid-template-areas:
+        "eins zwei zwei drei vier"
+        "fünf sechs sieben sieben vier";
+    justify-content: flex-start;
+}
+
+.item-1 {
+    grid-area: eins;
+}
+
+.item-2 {
+    grid-area: zwei;
+}
+
+.item-3 {
+    grid-area: drei;
+}
+
+.item-4 {
+    grid-area: vier;
+}
+
+.item-5 {
+    grid-area: fünf;
+}
+
+.item-6 {
+    grid-area: sechs;
+}
+
+.item-7 {
+    grid-area: sieben;
+}
