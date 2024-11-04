@@ -5,16 +5,32 @@ body {
 .grid-container {
     background-color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px;
-
+    row-gap: 3px;
+    column-gap: 3px;
+    width: 785px;
     grid-template-areas:
         "eins zwei zwei drei vier"
         "fünf sechs sieben sieben vier";
     justify-content: flex-start;
 }
+
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        width: 313px;
+        grid-template-areas:
+            "zwei zwei"
+            "sieben sieben"
+            "eins vier"
+            "fünf vier"
+            "drei sechs"
+        ;
+    }
+}
+
 
 .item-1 {
     grid-area: eins;
