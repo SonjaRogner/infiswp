@@ -1,0 +1,128 @@
+:root {
+    --color-primary: #00ad6a;
+    --color-secondary: #eafaf1;
+    --color-accent: #1fe374;
+    --color-dark: #080c16;
+    --color-light: #d6dae5;
+    --color-background: #fcfcfc;
+}
+
+.NAV {
+    background-color: #d6dae5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.uebersschrift {
+
+    text-align: center;
+}
+
+.nav-item5:hover {
+    border: solid #00ad6a;
+}
+
+.active {
+    color: #080c16;
+}
+
+
+
+
+
+
+
+li a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+body {
+    color: var(--color-dark);
+    background: var(--color-background);
+    background-color: #d6dae5;
+
+}
+
+
+.ueberschrift {
+    left: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.fragen {
+    background-color: #fcfcfc;
+}
+
+.card {
+    width: 300px;
+    left: 340px;
+    display: flex;
+    justify-content: center;
+}
+
+.Kartem {
+    display: flex;
+    justify-content: center;
+}
+
+.card-header {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.fq1 {
+    position: relative;
+    width: 300px;
+}
+
+.fq2 {
+    position: relative;
+    width: 300px;
+}
+
+.fq3 {
+    position: relative;
+    width: 300px;
+}
+
+.fq4 {
+    position: relative;
+    width: 300px;
+    left: 400px;
+    bottom: 650px;
+}
+
+.fq5 {
+    position: relative;
+    width: 300px;
+    left: 400px;
+    bottom: 650px;
+}
+
+.fq6 {
+    position: relative;
+    width: 300px;
+    left: 400px;
+    bottom: 650px;
+}
+
+.unten {
+    background-color: #080c16;
+    position: relative;
+    width: auto;
+    height: 340px;
+}
+
+.Kontakt {
+    position: absolute;
+    left: 300px;
+}
