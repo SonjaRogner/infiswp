@@ -1,8 +1,10 @@
 
 import { Database } from "https://deno.land/x/sqlite3/mod.ts";
 import { assert } from "https://deno.land/std/testing/asserts.ts";
-const dataPath = '../nmap-datenfiles';
+const dataPath = './nmap-datenfiles';
 const db = new Database("nmap_data.db");
+
+const outputFilePath = './outfile.csv';
 
 async function createTable() {
     //    await db.query(`
@@ -21,6 +23,7 @@ function parseDate(dateStr: string): Date {
 
 async function main() {
     await createTable();
+    let outputData = '';
     try {
         const dirEntries = await Deno.readDir(dataPath);
         //const promiseArray = [];
@@ -40,16 +43,17 @@ async function main() {
             let host = undefined;
             let mac = undefined;
             for (const line of (await Deno.readTextFile(filePath)).split('\n')) {
-                if (line.trim() === '' || line.startsWith('Starting Nmap')
-                    || line.startsWith('Nmap done') || line.startsWith('Host is up')) {
+                const cleanLine = line.replace(/\r/g, '');
+                if (cleanLine.trim() === '' || cleanLine.startsWith('Starting Nmap')
+                    || cleanLine.startsWith('Nmap done') || cleanLine.startsWith('Host is up')) {
                     continue;
                 }
-                if (line.startsWith('Nmap scan report for ')) {
-                    host = line.split(' ')[4];
+                if (cleanLine.startsWith('Nmap scan report for ')) {
+                    host = cleanLine.split(' ')[4];
                     continue;
                 }
-                if (line.startsWith('MAC Address: ')) {
-                    mac = line.split(' ')[2].toLowerCase();
+                if (cleanLine.startsWith('MAC Address: ')) {
+                    mac = cleanLine.split(' ')[2].toLowerCase();
                     //console.log(`${date.toISOString()};${host};${mac}`);
                     /* promiseArray.push(db.query("INSERT INTO scans (date, host, mac) VALUES (?, ?, ?)", [
                          date.toISOString(),
@@ -57,10 +61,12 @@ async function main() {
                          mac,
                      ]));
                      promiseArray.length === 7 && console.log(promiseArray);*/
-                    console.log(`${date.toISOString()};${host};${mac}`);
+                    //console.log(`${date.toISOString()};${host};${mac}`);
+                    outputData += `${date.toISOString()};${host};${mac}\n`;
                 }
             }
         }
+        await Deno.writeTextFile(outputFilePath, outputData);
         //console.log(`waiting for Insertion ${promiseArray.length} rows`);
         //await Promise.all(promiseArray);
         //console.log(`Inserted ${promiseArray.length} rows`);

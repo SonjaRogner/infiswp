@@ -13,6 +13,14 @@ try {
     console.error('Error reading the file:', err);
 }
 
+
+
+
+
+
+
+
+
 if (!dirEntry.isFile){
     continue;
 }
