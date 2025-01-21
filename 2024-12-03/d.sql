@@ -1,0 +1,14 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE d (Name text, Nachname text, Geschlecht text, Groesse number, Datum date);
+INSERT INTO d VALUES('Valerie','Boxhammer','female',173,'2006-09-14T19:32:07.241Z');
+INSERT INTO d VALUES('Kimberly','Waibel','female',106,'2018-10-03T18:16:40.203Z');
+INSERT INTO d VALUES('Simeon','Plautz','male',197,'2013-01-21T13:29:19.056Z');
+INSERT INTO d VALUES('Marleen','Hartz','female',144,'2018-10-12T10:08:26.435Z');
+INSERT INTO d VALUES('Nathalie','Schmitt','female',197,'2005-09-12T04:59:02.880Z');
+INSERT INTO d VALUES('Jacqueline','Grün','female',156,'2007-08-22T08:40:56.210Z');
+INSERT INTO d VALUES('Adam','Frahmeke','male',149,'2021-01-27T23:25:30.454Z');
+INSERT INTO d VALUES('Luc','Röse','male',206,'2017-08-28T17:11:01.373Z');
+INSERT INTO d VALUES('Wilhelm','Plautz','male',162,'2006-10-09T19:29:05.499Z');
+INSERT INTO d VALUES('Calvin','Wölpert','male',161,'2011-02-14T17:22:11.859Z');
+COMMIT;
