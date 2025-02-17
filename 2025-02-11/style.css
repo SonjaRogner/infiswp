@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(239, 219, 90);
+  min-width: 700px;
+}
+
+ul {
+  background-color: beige;
+  border-radius: 1ch;
+}
+
+button {
+  background-color: rgb(131, 148, 253);
+  border-radius: 0.5ch;
+  border: none;
+  padding: 1ch;
+  font-weight: bold;
+}
