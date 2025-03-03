@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(427, 523, 333);
+  min-width: 700px;
+}
+
+ul {
+  background-color: rgb(224, 220, 159);
+  border-radius: 1ch;
+}
+
+li.gerade {
+  background-color: rgb(238, 162, 255);
+}
+
+button {
+  background-color: rgb(131, 148, 253);
+  border-radius: 0.5ch;
+  border: none;
+  padding: 1ch;
+  font-weight: bold;
+}
