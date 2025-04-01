@@ -128,11 +128,9 @@ function onReset() {
     state.anzahlPersonen = 1;
     state.einnahmen = 0;
     state.textAusgabe = "Bitte wählen Sie Ihr Ziel!";
-   
     einwerfenInput.value = '';
     anzahlPersonenInput.value = 1; 
     zielSelect.value = "Zielwahl:"; 
-
     render();
 }
 
