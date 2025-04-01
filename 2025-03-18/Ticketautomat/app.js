@@ -8,6 +8,7 @@ const state = {
     einnahmen: 0,
     textAusgabe: "Bitte wählen Sie Ihr Ziel!",
 };
+
 const zieleUndPreise = {
     Bregenz: 90,
     Eisenstadt: 13,
@@ -18,22 +19,26 @@ const zieleUndPreise = {
     Salzburg: 60,
     "St. Pölten": 15,
 };
+
 // 2.STATE ACCESSORS / MUTATORS FN'S
 function state_fahrgaeste(anzahl) {
     state.anzahlPersonen = anzahl;
     state.fahrpreis = zieleUndPreise[state.ziel] * anzahl;
     state_calculate_textAusgabe();
 }
+
 function state_change_ziel(ziel) {
     const einzelpreis = zieleUndPreise[ziel];
     state.ziel = ziel;
     state.fahrpreis = einzelpreis * state.anzahlPersonen;
     state_calculate_textAusgabe();
 }
+
 function state_einwerfen(betrag) {
     state.guthaben += betrag;
     state_calculate_textAusgabe();
 }
+
 function state_calculate_textAusgabe() {
     if (!state.ziel) {
         state.textAusgabe = "Bitte wählen Sie Ihr Ziel!";
@@ -61,57 +66,77 @@ const einnahmenSpan = document.getElementById("einnahmen");
 const ticketKaufen = document.getElementById("ticketKaufen");
 const resetBtn = document.getElementById("reset");
 
-// 4. dom node creation
 // 5.RENDER FN
 function render() {
     ticketAusgabeTextarea.textContent = state.textAusgabe;
     guthabenSpan.textContent = state.guthaben;
     fahrpreisSpan.textContent = state.fahrpreis;
     einnahmenSpan.textContent = state.einnahmen;
-    fahrpreisSpan.textContent = state.fahrpreis;
 }
-// These functions will render the application state to the DOM
-// IMPORTANT TAKEAWAY: The state drives the UI, any state change should trigger a re - render of the UI;
 
 // 6.EVENT HANDLERS
-// These functions handle user interaction e.g.button clicks, key presses etc.
-// These functions will call the state mutators and then call the render function
-//     The naming convention for the event handlers is on < Event >
-//         Here we will create a functions that will handle e.g.a "click" event on a button.
 function onEinwurf() {
     const geld = einwerfenInput.valueAsNumber;
     if (isNaN(geld) || geld <= 0) {
         state.textAusgabe = "Bitte geben Sie einen gültigen Betrag ein!";
     } else {
         state_einwerfen(geld);
+        einwerfenInput.value = ''; 
     }
     render();
 }
+
 function onZielSelect() {
     state_change_ziel(zielSelect.value);
     render();
 }
+
 function onTicketKaufen() {
     try {
-        "TODO";
+        if (!state.ziel) {
+            state.textAusgabe = "Bitte wählen Sie ein Ziel!";
+            return;
+        }
+       
+        const summe = state.fahrpreis;
+        const gegeben = state.guthaben;
+        const restgeld = gegeben - summe;
+
+        state.textAusgabe = `===============================\n=== Fahrkarte nach ${state.ziel} ===\n===============================\nEinzelpreis: € ${zieleUndPreise[state.ziel]}.-\nAnzahl der Fahrgäste: ${state.anzahlPersonen}\n===============================\nSumme: € ${summe}.-\n===============================\nGegeben: € ${gegeben}.-\nRestgeld: € ${restgeld}.-\n===============================`;
+       
+        state.einnahmen += summe; 
+        state.guthaben = 0; 
+        state.anzahlPersonen = 1; 
     } catch (e) {
-        "TODO";
+        console.error(e);
+        state.textAusgabe = "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.";
     } finally {
         render();
     }
 }
+
 function onAnzahlChange() {
     const fahrgaeste = anzahlPersonenInput.value;
     state_fahrgaeste(fahrgaeste);
     render();
 }
+
 function onReset() {
-    "TODO";
+    state.guthaben = 0;
+    state.fahrpreis = 0;
+    state.ziel = null;
+    state.anzahlPersonen = 1;
+    state.einnahmen = 0;
+    state.textAusgabe = "Bitte wählen Sie Ihr Ziel!";
+   
+    einwerfenInput.value = '';
+    anzahlPersonenInput.value = 1; 
+    zielSelect.value = "Zielwahl:"; 
+
     render();
 }
+
 // 7.INIT BINDINGS
-// These are the initial bindings of the event handlers, i.e.register the handlers of Pt. 6 with the DOM Node Refs of;
-// Pt. 3;
 einwerfenInput.addEventListener("keyup", (e) => {
     if (e.key != "Enter") {
         return;
@@ -127,9 +152,8 @@ ticketKaufen.addEventListener("click", onTicketKaufen);
 resetBtn.addEventListener("click", onReset);
 
 // 8.INITIAL RENDER
-// Here will call the render function (Pt. 5) to render the initial state of the application;
-const options = Object.keys(zieleUndPreise); // Array
-options.unshift("Zielwahl:"); // String vorne anfügen
+const options = Object.keys(zieleUndPreise);
+options.unshift("Zielwahl:");
 zielSelect.innerHTML = options
     .map((e) => `<option value="${e}">${e}</option>`)
     .join("\n");
