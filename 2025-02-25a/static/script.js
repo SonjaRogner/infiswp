@@ -9,15 +9,13 @@ deleteElement.addEventListener("click", deleteList);
 const plus = document.querySelector("#plus");
 const minus = document.querySelector("#minus");
 
-let x = 10;
-
 plus.addEventListener("click", () => {
   x++;
   generateList();
 });
 
 minus.addEventListener("click", () => {
-  if (x > 0) {
+  if (x > 0 && ul.innerHTML !== "") {
     x--;
     generateList();
   } else {
@@ -25,6 +23,8 @@ minus.addEventListener("click", () => {
     alert("Hey, es gibt keine Listenelemente mehr!!!");
   }
 });
+
+let x = 10;
 
 function generateList1() {
   ul.innerHTML = "";
