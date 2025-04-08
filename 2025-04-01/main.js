@@ -23,8 +23,8 @@ console.log(`Gemeinsames Alter: ${barbara.age + anton.age}`);
 const decoder = new TextDecoder("utf-8");
 const data = Deno.readFileSync("fragen.json");
 const fragenJsonArray = JSON.parse(decoder.decode(data));
-const fragenArray = fragenJsonArray.map(f =>
-new Frage(f.frage, f.optionen, f.antwort)
+const fragenArray = fragenJsonArray.map(frage =>
+new Frage(frage.frage, frage.optionen, frage.antwort)
 );
 
 console.log(fragenArray);
