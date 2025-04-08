@@ -1,0 +1,19 @@
+body {
+    background-color: #90c4ff;
+}
+
+.frage {
+    background-color: #ffe992;
+    border-radius: 10px;
+    padding: 20px;
+    border: 6px solid #b3d3ff;
+}
+
+.Weiter {
+    background-color: #ffb3b3;
+    margin: 19px;
+    width: 60px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 6px solid #ffb3f1;
+}
