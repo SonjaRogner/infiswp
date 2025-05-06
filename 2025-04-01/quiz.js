@@ -8,4 +8,9 @@ jsonData.forEach(() => {
 
     console.log(_.frage);
 });
+
 console.log(`Es gibt ${jsonData.length} Fragen.`);
+
+document.getElementById("nächsteFrage").addEventListener("click", () => { 
+    document.getElementById("frage").innerHTML = fragenArray[0].frage;
+});

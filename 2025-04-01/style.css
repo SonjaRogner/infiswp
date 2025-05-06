@@ -2,7 +2,7 @@ body {
     background-color: #90c4ff;
 }
 
-.frage {
+#frage {
     background-color: #ffe992;
     border-radius: 10px;
     padding: 20px;
